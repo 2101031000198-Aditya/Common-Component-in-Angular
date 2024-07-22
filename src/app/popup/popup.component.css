@@ -1,0 +1,38 @@
+div {
+    font-family: sans-serif;
+    text-align: center;
+    position: relative; 
+    animation: slide-in 1s ease-in-out forwards;
+    border-radius: 50%; 
+    /* font-family: 'formula1-display-bold', sans-serif; */
+  }
+  
+  h2 {
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+    animation: bounce-in 0.8s ease-in-out forwards;
+  }
+  
+  @keyframes slide-in {
+    from {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes bounce-in {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  

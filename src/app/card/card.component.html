@@ -1,0 +1,127 @@
+<!-- FIRST DRAFT  -->
+
+<!-- <div class="card">
+  <img src="path/to/image.jpg" class="card-img-top rounded-circle img-thumbnail" alt="Card image cap">
+  <div class="card-body">
+    <div style="display: flex; flex-direction: column;">
+      <h5 class="card-title">{{ item.name }}</h5>
+      <span class="badge bg-primary font-weight-bold">{{ item.role }}</span>
+      <p class="card-text">{{ item.description }}</p>
+    </div>
+  </div>
+</div> -->
+
+<!-- SECOND DRAFT  -->
+
+<!-- <div class="card">
+    <div class="card-body">
+      <img src={{item.imageUrl}} class="card-img-top rounded-circle img-thumbnail" alt="Card image cap">
+      <h5 class="card-title">{{ item.name }}</h5>
+      <span class="badge bg-primary font-weight-bold">{{ item.role }}</span>
+      <p class="card-text">{{ item.description }}</p>
+    </div>
+  </div> -->
+
+<!-- THIRD DRAFT  -->
+
+<!-- <div class="row row-cols-2 gx-0 gy-0">
+    <div class="card border-secondary mb-3">
+      <div class="card-body text-center">
+        <img src="{{ item.imageUrl }}" class="card-img-top rounded-circle img-thumbnail border border-secondary" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title text-dark font-weight-bold">{{ item.name }}</h5>
+          <span class="badge bg-primary font-weight-bold">{{ item.role }}</span>
+          <p class="card-text text-muted">{{ item.description }}</p>
+        </div>
+      </div>
+    </div>
+    </div> -->
+  
+
+<!-- FOURTH DRAFT  -->
+
+<!-- <div class="card border-secondary">
+    <div class="card-body text-center">
+      <img src="{{ item.imageUrl }}" class="card-img-top rounded-circle img-thumbnail border border-secondary" alt="Card image cap">
+      <div class="card-body">
+        <h4 class="card-title text-dark font-weight-bolder">{{ item.name }}</h4>
+        <span class="badge bg-primary font-weight-bold">{{ item.role }}</span>
+        <p class="card-text text-muted">{{ item.description }}</p>
+      </div>
+    </div>
+  </div> -->
+
+<!-- FIFTH DRAFT  -->
+
+<!-- <div class="card border-2 border-primary shadow-lg rounded-5 overflow-hidden bg-image"
+  style="background-image: url(https://static.vecteezy.com/system/resources/previews/006/469/232/non_2x/abstract-white-background-with-halftone-texture-free-vector.jpg); background-size: cover; ">
+  <img src="{{ item.imageUrl }}"
+    class="card-img-top rounded-circle img-thumbnail border border-secondary mt- d-block mx-auto" alt="Card image cap">
+  <div class="card-body text-center p-4">
+    <h5 class="card-title text-primary font-weight-bold fs-5">{{ item.name }}</h5>
+    <span class="badge bg-primary font-weight-bold">{{ item.role }}</span>
+    <p class="card-text text-muted lh-1.5 mt-3">{{ item.description }}</p>
+  </div>
+</div>  -->
+
+<!-- <div class="card" (click)="showPopup(item)">
+  <app-popup *ngIf="item.showPopup" [name]="item.name" (closePopup)="hidePopup(item)"></app-popup>
+</div> -->
+
+<!-- <div class="card" (click)="showPopup(item)">
+  <div class="popup" *ngIf="item.showPopup">
+    Hi {{ item.name }}!
+  </div>
+</div>
+
+
+<!-- SIXTH DRAFT  -->
+
+<!-- card.component.html -->
+<!-- <div class="card border-2 border-primary shadow-lg rounded-5 overflow-hidden bg-image"
+  style="background-image: url(https://static.vecteezy.com/system/resources/previews/006/469/232/non_2x/abstract-white-background-with-halftone-texture-free-vector.jpg); background-size: cover; "
+  (mouseover)="openPopup($event)">
+  <img src="{{ item.imageUrl }}"
+    class="card-img-top rounded-circle img-thumbnail border border-secondary  d-block mx-auto" alt="Card image cap">
+  <div class="card-body text-center p-4">
+    <h5 class="card-title text-primary font-weight-bold fs-5">{{ item.name }}</h5>
+    <span class="badge bg-primary font-weight-bold">{{ item.role }}</span>
+    <p class="card-text text-muted lh-1.5 mt-3">{{ item.description }}</p>
+  </div>
+</div> -->
+
+<!-- SEVENTH DRAFT  -->
+
+<div class="card border-2 border-primary shadow-lg rounded-5 overflow-hidden bg-image"
+  style="background-image: url(https://static.vecteezy.com/system/resources/previews/006/469/232/non_2x/abstract-white-background-with-halftone-texture-free-vector.jpg); background-size: cover; height: 300px "
+  (mousedown)="openPopup($event)">
+  <div class="row g-0">
+    <div class="col-12 col-md-6">
+      <img src="{{ item.imageUrl }}" class="card-img-top rounded-circle img-thumbnail border border-secondary d-block mx-auto mt-2" alt="Card image cap">
+    </div>
+    <div class="col-12 col-md-6">
+      <div class="card-body text-center p-5">
+        <h5 class="card-title text-primary font-weight-bold fs-3">{{ item.name }}</h5>
+        <span class="badge bg-primary font-weight-bold">{{ item.role }}</span>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <div class="card-body text-center p-4">
+        <ul class="list-unstyled">
+         
+          <li>{{ item.description.split('.')[0] }}</li>
+          <li>{{ item.description.split('.')[1] }}</li>
+          <li>{{ item.description.split('.')[2] }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
